@@ -21,10 +21,10 @@
     {{ end }}
     {{ if .Site.Params.socialAppearAtTop }}
       <ul class="icons">
-        {{ if .Site.Params.rssAppearAtTop }}
-          {{ partial "rss-icon" . }}
-        {{ end }}
         {{ partial "social" . }}
+          {{ if .Site.Params.rssAppearAtTop }}
+              {{ partial "rss-icon" . }}
+          {{ end }}
       </ul>
     {{ end }}
   </section>
@@ -33,7 +33,7 @@
   <section class="recent-posts">
     <div class="mini-posts">
       <header>
-        <h3>Recent Posts</h3>
+        <h3>Recent Postss</h3>
       </header>
       <div class="posts-container">
         {{ $.Scratch.Set "recentPosts" .Site.Pages }}
