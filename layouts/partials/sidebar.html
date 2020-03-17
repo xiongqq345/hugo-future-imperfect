@@ -33,7 +33,7 @@
   <section class="recent-posts">
     <div class="mini-posts">
       <header>
-        <h3>Recent Postss</h3>
+        <h3>我最近分享的文章</h3>
       </header>
       <div class="posts-container">
         {{ $.Scratch.Set "recentPosts" .Site.Pages }}
@@ -67,7 +67,7 @@
           {{ else }}
             "/post/"
           {{ end }}
-        class="button">View more posts</a>
+        class="button">点击查看更多</a>
       {{ end }}
     </div>
   </section>
@@ -80,7 +80,7 @@
     <section id="categories">
       <header>
         <h3>
-          <a href="/categories/">Categories</a>
+          <a href="/categories/">分类</a>
         </h3>
       </header>
         {{ if .Site.Params.categoriesByCount }}
