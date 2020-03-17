@@ -2,8 +2,14 @@
 <header id="header">
     {{ if or .IsHome (not .Site.Params.DynamicTitles) }}
       <h1><a href="{{ "/" | relURL }}">{{ .Site.Params.navbarTitle }}</a></h1>
+    {{ else if eq .Section "blog" }}
+        <h1><a href="{{ "/" | relURL }}">( ﹁ ﹁ ) ~→&nbsp;&nbsp;文章列表</a></h1>
+    {{ else if eq .Section "categories" }}
+        <h1><a href="{{ "/" | relURL }}">( ﹁ ﹁ ) ~→&nbsp;&nbsp;文章分类</a></h1>
+    {{ else if eq .Section "contact" }}
+        <h1><a href="{{ "/" | relURL }}">( ﹁ ﹁ ) ~→&nbsp;&nbsp;UPUP</a></h1>
     {{ else if ne .Section "" }}
-      <h1><a href="{{ "/" | relURL }}">~~~{{ .Section }}~~~</a></h1>
+      <h1><a href="{{ "/" | relURL }}">( ﹁ ﹁ ) ~→{{ .Section }}</a></h1>
     {{ else }}
       <h1><a href="{{ "/" | relURL }}">{{ .Title }}</a></h1>
     {{ end }}
